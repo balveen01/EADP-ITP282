@@ -1,0 +1,150 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/assets/mp/_settings/AA.master" AutoEventWireup="true" CodeBehind="Navigation.master.cs" Inherits="Triangle.assets.mp._settings.Navigation" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitlePlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+    <style>
+        .bg-green {
+            background-color: #3CAA4A;
+        }
+
+        .navbar-brand {
+            font-size: 0;
+        }
+
+        .nav-item.mr-2 .nav-link {
+            width: 100px;
+            text-align: center;
+        }
+
+        .feather {
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            padding: 48px 0 0;
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        }
+
+        .sidebar-sticky {
+            position: relative;
+            top: 0;
+            height: calc(100vh - 48px);
+            padding-top: .5rem;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        @supports ((position: -webkit-sticky) or (position: sticky)) {
+            .sidebar-sticky {
+                position: -webkit-sticky;
+                position: sticky;
+            }
+        }
+
+        .sidebar .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+
+            .sidebar .nav-link .feather {
+                margin-right: 4px;
+                color: #999;
+            }
+
+            .sidebar .nav-link.active {
+                color: #007bff;
+            }
+
+                .sidebar .nav-link:hover .feather,
+                .sidebar .nav-link.active .feather {
+                    color: inherit;
+                }
+
+        .sidebar-heading {
+            font-size: .75rem;
+            text-transform: uppercase;
+        }
+
+        main {
+            padding-top: 133px;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                padding-top: 48px;
+            }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <asp:LinkButton ID="lbtn_Home" runat="server" CssClass="navbar-brand col-md-1 mr-0" OnClick="lbtn_Home_Click" CausesValidation="false">
+            <asp:Image runat="server" ImageUrl="/assets/template/img/logo-white-text.png" height="28" />
+        </asp:LinkButton>
+
+        <ul class="navbar-nav px-3">
+            <li class="nav-item mr-2">
+                <asp:LinkButton ID="lbtn_Accounts" runat="server" CssClass="nav-link text-white" OnClick="lbtn_Accounts_Click" CausesValidation="false">Accounts</asp:LinkButton>
+            </li>
+            <li class="nav-item mr-2">
+                <asp:LinkButton ID="lbtn_BCOrders" runat="server" CssClass="nav-link text-white" OnClick="lbtn_BCOrders_Click" CausesValidation="false">COrders</asp:LinkButton>
+            </li>
+            <li class="nav-item mr-2">
+                <asp:LinkButton ID="lbtn_POrders" runat="server" CssClass="nav-link text-white" OnClick="lbtn_POrders_Click" CausesValidation="false">POrders</asp:LinkButton>
+            </li>
+              <li class="nav-item mr-2">
+                <asp:LinkButton ID="lbtn_Finance" runat="server" CssClass="nav-link text-white" OnClick="lbtn_Finance_Click" CausesValidation="false">Finance</asp:LinkButton>
+            </li>
+            <li class="nav-item mr-2">
+                <asp:LinkButton ID="lbtn_Catalogue" runat="server" CssClass="nav-link text-white" OnClick="lbtn_Catalogue_Click" CausesValidation="false">Catalogue</asp:LinkButton>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav px-3 ml-auto">
+            <li class="nav-item mr-4 bg-green text-center" style="width: 220px;">
+                <a class="nav-link text-white text-capitalize" href="#">
+                    <asp:Label ID="lbl_name" runat="server" Text="Name"></asp:Label></a>
+            </li>
+            <li class="nav-item text-nowrap mr-5">
+                <asp:LinkButton ID="lbtn_LogOut" runat="server" CssClass="nav-link text-white" OnClick="lbtn_LogOut_Click" CausesValidation="false">Log Out</asp:LinkButton>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <asp:ContentPlaceHolder ID="SideNavPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-10 ml-sm-auto px-4">
+                <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+        </div>
+    </div>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="JavascriptPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="JavascriptPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

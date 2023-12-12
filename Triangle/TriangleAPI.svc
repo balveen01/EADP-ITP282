@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Triangle.TriangleAPI" CodeBehind="TriangleAPI.svc.cs" %>

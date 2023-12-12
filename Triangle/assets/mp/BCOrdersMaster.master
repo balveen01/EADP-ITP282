@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/assets/mp/_settings/Navigation.master" AutoEventWireup="true" CodeBehind="BCOrdersMaster.master.cs" Inherits="Triangle.assets.mp.BCOrdersMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitlePlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+    <style>
+        #BodyPlaceHolder_BodyPlaceHolder_lbtn_BCOrders {
+            background-color: #3CAA4A;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="SideNavPlaceHolder" runat="server">
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_CO_View" runat="server" class="nav-link" OnClick="lbtn_CO_View_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            Orders
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+
+    <%--<li class="nav-item">
+        <asp:LinkButton ID="lbtn_Accounts_Archived" runat="server" class="nav-link" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+            View Archived
+        </asp:LinkButton>
+    </li>--%>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="JavascriptPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="JavascriptPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

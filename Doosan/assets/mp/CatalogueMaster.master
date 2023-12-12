@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/assets/mp/_settings/Navigation.master" AutoEventWireup="true" CodeBehind="CatalogueMaster.master.cs" Inherits="Doosan.assets.mp.CatalogueMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitlePlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+    <style>
+        #BodyPlaceHolder_BodyPlaceHolder_lbtn_Catalogue {
+            background-color: #0088CC;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="SideNavPlaceHolder" runat="server">
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Products" runat="server" CssClass="nav-link" OnClick="lbtn_Products_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+            Products
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Products_Add" runat="server" CssClass="nav-link" OnClick="lbtn_Products_Add_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+            Add Product
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_bundle" runat="server" CssClass="nav-link" OnClick="lbtn_bundle_Click" CausesValidation="false">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Bundle
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_addbundle" runat="server" CssClass="nav-link" OnClick="lbtn_addbundle_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+           Add Bundle
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Categories" runat="server" CssClass="nav-link" OnClick="lbtn_Categories_Click" CausesValidation="false">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            Categories
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Accounts_Archived" runat="server" CssClass="nav-link" OnClick="lbtn_Accounts_Archived_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+            Archived Products
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Bundle_Archive" runat="server" CssClass="nav-link" OnClick="lbtn_Bundle_Archive_Click">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+            Archived Bundles
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Categories_Archived" runat="server" CssClass="nav-link" OnClick="lbtn_Categories_Archived_Click">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+            Archived Categories
+        </asp:LinkButton>
+    </li>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="JavascriptPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="JavascriptPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

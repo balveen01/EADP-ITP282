@@ -1,0 +1,31 @@
+﻿.table-display {
+    display: table;
+    height: 600px;
+    width: 100%;
+}
+
+.table-child {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.feather {
+    color: inherit !important;
+}
+
+.sidebar .nav-link .feather {
+    color: inherit !important;
+}
+
+.w-160 {
+    width: 160px;
+}
+
+.table.table-striped.table-bordered img {
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.btn {
+    min-width: 100px;
+}

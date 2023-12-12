@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/assets/mp/_settings/Navigation.master" AutoEventWireup="true" CodeBehind="PaymentMaster.master.cs" Inherits="Doosan.assets.mp.FinanceMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitlePlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+    <style>
+        #financeDropdown {
+            background-color: #0088CC;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="SideNavPlaceHolder" runat="server">
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Payments" runat="server" CssClass="nav-link" CausesValidation="false" OnClick="lbtn_Payments_Click">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            Payments
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="JavascriptPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="JavascriptPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

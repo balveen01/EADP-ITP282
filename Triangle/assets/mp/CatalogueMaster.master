@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/assets/mp/_settings/Navigation.master" AutoEventWireup="true" CodeBehind="CatalogueMaster.master.cs" Inherits="Triangle.assets.mp.CatalogueMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitlePlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+    <style>
+        #BodyPlaceHolder_BodyPlaceHolder_lbtn_Catalogue {
+            background-color: #3CAA4A;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="SideNavPlaceHolder" runat="server">
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Products" runat="server" CssClass="nav-link" OnClick="lbtn_Products_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+            Supplier Products
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Bundle" runat="server" CssClass="nav-link" OnClick="lbtn_Bundle_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+            Supplier Bundle
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_CProducts" runat="server" CssClass="nav-link" OnClick="lbtn_CProducts_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+            Companies Products
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Products_Add" runat="server" CssClass="nav-link" OnClick="lbtn_Products_Add_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+            Add New Product
+        </asp:LinkButton>
+    </li>
+
+      <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Categories" runat="server" CssClass="nav-link" OnClick="lbtn_Categories_Click" CausesValidation="false">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            Categories
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Item_List" runat="server" CssClass="nav-link" OnClick="lbtn_Item_List_Click" CausesValidation="false">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            Item List
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Add_Item" runat="server" CssClass="nav-link" OnClick="lbtn_Add_Item_Click" CausesValidation="false">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            Add Item
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Accounts_Archived" runat="server" class="nav-link" OnClick="lbtn_Accounts_Archived_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+            Archived Products
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_cat_Archived" runat="server" class="nav-link" OnClick="lbtn_cat_Archived_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+            Archived Categories
+        </asp:LinkButton>
+    </li>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="JavascriptPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="JavascriptPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

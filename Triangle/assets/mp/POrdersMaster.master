@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/assets/mp/_settings/Navigation.master" AutoEventWireup="true" CodeBehind="POrdersMaster.master.cs" Inherits="Triangle.assets.mp.POrdersMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitlePlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+    <style>
+        #BodyPlaceHolder_BodyPlaceHolder_lbtn_POrders {
+            background-color: #3CAA4A;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="SideNavPlaceHolder" runat="server">
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_PO_View" runat="server" class="nav-link" OnClick="lbtn_PO_View_Click" CausesValidation="false">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            Purchase Orders
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_raise_po" runat="server" class="nav-link" OnClick="lbtn_raise_po_Click" CausesValidation="false">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Raise Order
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+
+     <li class="nav-item">
+        <asp:LinkButton ID="lbtn_approve_po" runat="server" class="nav-link" OnClick="lbtn_approve_po_Click" CausesValidation="false">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Approved Orders
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Status" runat="server" class="nav-link" OnClick="lbtn_Status_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            Rejected Orders
+            <asp:Label ID="lbl_reject" runat="server" ForeColor="Red"></asp:Label>
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_DO_View" runat="server" class="nav-link" OnClick="lbtn_DO_View_Click" CausesValidation="false">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: inherit;" class="feather feather-truck"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            Delivery Orders
+        </asp:LinkButton>
+    </li>
+
+    <li class="nav-item">
+        <hr />
+    </li>
+
+    <li class="nav-item">
+        <asp:LinkButton ID="lbtn_Accounts_Archived" runat="server" class="nav-link" OnClick="lbtn_Accounts_Archived_Click" CausesValidation="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+            Archived Orders
+        </asp:LinkButton>
+    </li>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="JavascriptPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="JavascriptPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

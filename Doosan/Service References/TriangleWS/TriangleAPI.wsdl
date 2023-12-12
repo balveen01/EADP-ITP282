@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TriangleAPI" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8001/TriangleAPI.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8001/TriangleAPI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8001/TriangleAPI.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITriangleAPI_GetPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPO" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetAppPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppPO" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetAppPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetDecPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecPO" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetDecPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetPendPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendPO" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetPendPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetPODetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPODetails" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetPODetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPODetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_SuppApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuppApprove" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_SuppApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuppApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_SuppDeclined_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuppDeclined" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_SuppDeclined_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuppDeclinedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetPOProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPOProducts" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetPOProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPOProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayment" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_GetDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_updateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateStatus" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_updateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_updateStatusDecline_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateStatusDecline" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_updateStatusDecline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateStatusDeclineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_Getallinvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getallinvoice" />
+  </wsdl:message>
+  <wsdl:message name="ITriangleAPI_Getallinvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetallinvoiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITriangleAPI">
+    <wsdl:operation name="GetPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/GetPO" message="tns:ITriangleAPI_GetPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/GetPOResponse" message="tns:ITriangleAPI_GetPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/GetAppPO" message="tns:ITriangleAPI_GetAppPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/GetAppPOResponse" message="tns:ITriangleAPI_GetAppPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDecPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/GetDecPO" message="tns:ITriangleAPI_GetDecPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/GetDecPOResponse" message="tns:ITriangleAPI_GetDecPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/GetPendPO" message="tns:ITriangleAPI_GetPendPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/GetPendPOResponse" message="tns:ITriangleAPI_GetPendPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/GetPODetails" message="tns:ITriangleAPI_GetPODetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/GetPODetailsResponse" message="tns:ITriangleAPI_GetPODetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuppApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/SuppApprove" message="tns:ITriangleAPI_SuppApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/SuppApproveResponse" message="tns:ITriangleAPI_SuppApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuppDeclined">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/SuppDeclined" message="tns:ITriangleAPI_SuppDeclined_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/SuppDeclinedResponse" message="tns:ITriangleAPI_SuppDeclined_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/GetPOProducts" message="tns:ITriangleAPI_GetPOProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/GetPOProductsResponse" message="tns:ITriangleAPI_GetPOProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/GetPayment" message="tns:ITriangleAPI_GetPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/GetPaymentResponse" message="tns:ITriangleAPI_GetPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/GetDetails" message="tns:ITriangleAPI_GetDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/GetDetailsResponse" message="tns:ITriangleAPI_GetDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/updateStatus" message="tns:ITriangleAPI_updateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/updateStatusResponse" message="tns:ITriangleAPI_updateStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateStatusDecline">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/updateStatusDecline" message="tns:ITriangleAPI_updateStatusDecline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/updateStatusDeclineResponse" message="tns:ITriangleAPI_updateStatusDecline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getallinvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITriangleAPI/Getallinvoice" message="tns:ITriangleAPI_Getallinvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITriangleAPI/GetallinvoiceResponse" message="tns:ITriangleAPI_Getallinvoice_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITriangleAPI" type="tns:ITriangleAPI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPO">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/GetPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppPO">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/GetAppPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDecPO">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/GetDecPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendPO">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/GetPendPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetails">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/GetPODetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppApprove">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/SuppApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppDeclined">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/SuppDeclined" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOProducts">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/GetPOProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayment">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/GetPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetails">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/GetDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStatus">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/updateStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStatusDecline">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/updateStatusDecline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getallinvoice">
+      <soap:operation soapAction="http://tempuri.org/ITriangleAPI/Getallinvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TriangleAPI">
+    <wsdl:port name="BasicHttpBinding_ITriangleAPI" binding="tns:BasicHttpBinding_ITriangleAPI">
+      <soap:address location="http://localhost:8001/TriangleAPI.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

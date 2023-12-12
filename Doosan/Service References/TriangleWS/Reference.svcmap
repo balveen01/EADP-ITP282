@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="de337583-aa52-493c-bbf1-b39bcafbda5e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8001/TriangleAPI.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TriangleAPI.xsd" MetadataType="Schema" ID="3fd4c3a5-35ff-41dd-ad71-87827535ea3c" SourceId="1" SourceUrl="http://localhost:8001/TriangleAPI.svc?xsd=xsd1" />
+    <MetadataFile FileName="TriangleAPI.wsdl" MetadataType="Wsdl" ID="46316ebe-7d16-438c-9123-e654f76f1d1c" SourceId="1" SourceUrl="http://localhost:8001/TriangleAPI.svc?wsdl" />
+    <MetadataFile FileName="TriangleAPI.disco" MetadataType="Disco" ID="58333088-5c13-49e6-88ea-659dd3f626a3" SourceId="1" SourceUrl="http://localhost:8001/TriangleAPI.svc?disco" />
+    <MetadataFile FileName="TriangleAPI1.xsd" MetadataType="Schema" ID="cf07c31a-5bec-48e1-8677-883a0f22c8e2" SourceId="1" SourceUrl="http://localhost:8001/TriangleAPI.svc?xsd=xsd0" />
+    <MetadataFile FileName="TriangleAPI2.xsd" MetadataType="Schema" ID="72d88cc8-c073-4055-9130-63ff5b6248fa" SourceId="1" SourceUrl="http://localhost:8001/TriangleAPI.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DoosanAPI" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/DoosanAPI.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8000/DoosanAPI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/DoosanAPI.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDoosanAPI_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_GetProductDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_GetProductDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_Allthree_InputMessage">
+    <wsdl:part name="parameters" element="tns:Allthree" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_Allthree_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllthreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_GetBundles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundles" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_GetBundles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_GetBundleDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_GetBundleDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_GetBundProd_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundProd" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_GetBundProd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundProdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_getDelivery_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDelivery" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_getDelivery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDeliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_getDeliveryFullDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDeliveryFullDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_getDeliveryFullDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDeliveryFullDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_getDeliveryFullDetailsByCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDeliveryFullDetailsByCompany" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_getDeliveryFullDetailsByCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDeliveryFullDetailsByCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_changeDeliveryStatusDelivered_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeDeliveryStatusDelivered" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_changeDeliveryStatusDelivered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeDeliveryStatusDeliveredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_Getallinvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getallinvoice" />
+  </wsdl:message>
+  <wsdl:message name="IDoosanAPI_Getallinvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetallinvoiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDoosanAPI">
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/GetProducts" message="tns:IDoosanAPI_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/GetProductsResponse" message="tns:IDoosanAPI_GetProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/GetProductDetails" message="tns:IDoosanAPI_GetProductDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/GetProductDetailsResponse" message="tns:IDoosanAPI_GetProductDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Allthree">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/Allthree" message="tns:IDoosanAPI_Allthree_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/AllthreeResponse" message="tns:IDoosanAPI_Allthree_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBundles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/GetBundles" message="tns:IDoosanAPI_GetBundles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/GetBundlesResponse" message="tns:IDoosanAPI_GetBundles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/GetBundleDetails" message="tns:IDoosanAPI_GetBundleDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/GetBundleDetailsResponse" message="tns:IDoosanAPI_GetBundleDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBundProd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/GetBundProd" message="tns:IDoosanAPI_GetBundProd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/GetBundProdResponse" message="tns:IDoosanAPI_GetBundProd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDelivery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/getDelivery" message="tns:IDoosanAPI_getDelivery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/getDeliveryResponse" message="tns:IDoosanAPI_getDelivery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDeliveryFullDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/getDeliveryFullDetails" message="tns:IDoosanAPI_getDeliveryFullDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/getDeliveryFullDetailsResponse" message="tns:IDoosanAPI_getDeliveryFullDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDeliveryFullDetailsByCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/getDeliveryFullDetailsByCompany" message="tns:IDoosanAPI_getDeliveryFullDetailsByCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/getDeliveryFullDetailsByCompanyResponse" message="tns:IDoosanAPI_getDeliveryFullDetailsByCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeDeliveryStatusDelivered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/changeDeliveryStatusDelivered" message="tns:IDoosanAPI_changeDeliveryStatusDelivered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/changeDeliveryStatusDeliveredResponse" message="tns:IDoosanAPI_changeDeliveryStatusDelivered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getallinvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoosanAPI/Getallinvoice" message="tns:IDoosanAPI_Getallinvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoosanAPI/GetallinvoiceResponse" message="tns:IDoosanAPI_Getallinvoice_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDoosanAPI" type="tns:IDoosanAPI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDetails">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/GetProductDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Allthree">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/Allthree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBundles">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/GetBundles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleDetails">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/GetBundleDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBundProd">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/GetBundProd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDelivery">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/getDelivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDeliveryFullDetails">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/getDeliveryFullDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDeliveryFullDetailsByCompany">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/getDeliveryFullDetailsByCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeDeliveryStatusDelivered">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/changeDeliveryStatusDelivered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getallinvoice">
+      <soap:operation soapAction="http://tempuri.org/IDoosanAPI/Getallinvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DoosanAPI">
+    <wsdl:port name="BasicHttpBinding_IDoosanAPI" binding="tns:BasicHttpBinding_IDoosanAPI">
+      <soap:address location="http://localhost:8000/DoosanAPI.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ca1dca58-4992-4618-ac88-252720ed073b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/DoosanAPI.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DoosanAPI.xsd" MetadataType="Schema" ID="7cfc25a6-500d-45b8-b90f-93b9bd0ff293" SourceId="1" SourceUrl="http://localhost:8000/DoosanAPI.svc?xsd=xsd1" />
+    <MetadataFile FileName="DoosanAPI.wsdl" MetadataType="Wsdl" ID="2439452f-10b8-4307-8ec9-2aab441549f0" SourceId="1" SourceUrl="http://localhost:8000/DoosanAPI.svc?wsdl" />
+    <MetadataFile FileName="DoosanAPI1.xsd" MetadataType="Schema" ID="4436e781-873a-49ef-bf53-c608b8435e25" SourceId="1" SourceUrl="http://localhost:8000/DoosanAPI.svc?xsd=xsd2" />
+    <MetadataFile FileName="DoosanAPI2.xsd" MetadataType="Schema" ID="b7adb9c9-b935-44c6-a9e2-1bcedd3edba4" SourceId="1" SourceUrl="http://localhost:8000/DoosanAPI.svc?xsd=xsd0" />
+    <MetadataFile FileName="DoosanAPI.disco" MetadataType="Disco" ID="70a68928-4569-417e-89d4-7e3bd4918e3c" SourceId="1" SourceUrl="http://localhost:8000/DoosanAPI.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
